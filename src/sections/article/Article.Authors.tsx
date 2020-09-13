@@ -91,7 +91,7 @@ const ArticleAuthors: React.FC<AuthorsProps> = ({ authors }) => {
   } else {
     return (
       <AuthorLink
-        as={authors[0].authorsPage ? Link : "div"}
+        as={authors[0].authorsPage ? "div" : "div"}
         to={authors[0].slug}
       >
         <AuthorAvatar>
@@ -131,14 +131,6 @@ const AuthorLink = styled.div`
   display: flex;
   align-items: center;
   color: inherit;
-
-  strong {
-    transition: ${p => p.theme.colorModeTransition};
-  }
-
-  &:hover strong {
-    color: ${p => p.theme.colors.primary};
-  }
 `;
 
 const CoAuthorsList = styled.div`

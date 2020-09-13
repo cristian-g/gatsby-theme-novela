@@ -8,6 +8,7 @@ import { Icon } from '@types';
 const Logo: Icon = ({ fill = "white" }) => {
   return (
     <LogoContainer>
+      CG
     </LogoContainer>
   );
 };

@@ -6,7 +6,7 @@ import SEO from "@components/SEO";
 import Layout from "@components/Layout";
 import Paginator from "@components/Navigation/Navigation.Paginator";
 
-import ArticlesHero from "../sections/articles/Articles.Hero";
+import AuthorHero from "../sections/author/Author.Hero";
 import ArticlesList from "../sections/articles/Articles.List";
 
 import { Template } from "@types";
@@ -18,7 +18,7 @@ const ArticlesPage: Template = ({ location, pageContext }) => {
   return (
     <Layout>
       <SEO pathname={location.pathname} />
-      <ArticlesHero authors={authors} />
+      <AuthorHero author={authors[0]} />
       <Section narrow>
         <ArticlesList articles={articles} />
         <ArticlesPaginator show={pageContext.pageCount > 1}>
